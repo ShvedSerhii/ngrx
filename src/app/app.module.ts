@@ -9,6 +9,7 @@ import { StoreModule } from '@ngrx/store';
 import { UserReducer } from './reducers/user.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { RandomUserEffects } from './effects/random-user.effects';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RandomUserEffects } from './effects/random-user.effects';
     HttpClientModule,
     StoreModule.forRoot({ users: UserReducer }),
     EffectsModule.forRoot([]),
-    EffectsModule.forFeature([RandomUserEffects])
+    EffectsModule.forFeature([RandomUserEffects]),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
