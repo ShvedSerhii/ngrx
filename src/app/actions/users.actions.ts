@@ -1,10 +1,10 @@
-import { Action } from "@ngrx/store";
+import { Action } from '@ngrx/store';
 
 export enum UserActionTypes {
-  Get = "[User] Get",
-  Add = "[User] Add",
-  Remove = "[User] Remove",
-  Edit = "[User] Edit"
+  Get = '[User] Get',
+  Add = '[User] Add',
+  Remove = '[User] Remove',
+  Edit = '[User] Edit'
 }
 
 export class ActionEx implements Action {

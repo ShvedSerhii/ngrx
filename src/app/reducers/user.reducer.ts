@@ -1,11 +1,11 @@
-import { ActionEx, UserActionTypes } from "../actions/users.actions";
+import { ActionEx, UserActionTypes } from '../actions/users.actions';
 
 export const initialState = [
   {
-    login: "sem"
+    login: 'sem'
   },
   {
-    login: "liza"
+    login: 'liza'
   }
 ];
 
@@ -19,11 +19,11 @@ export function UserReducer(state = initialState, action: ActionEx) {
         ...state.slice(action.payload + 1)
       ];
     case UserActionTypes.Edit:
-        return [
-            ...state.slice(0, action.payload.userIndex),
-            {login: action.payload.login},
-            ...state.slice(action.payload.userIndex + 1)
-        ];
+      return [
+        ...state.slice(0, action.payload.userIndex),
+        { login: action.payload.login },
+        ...state.slice(action.payload.userIndex + 1)
+      ];
     default:
       return state;
   }

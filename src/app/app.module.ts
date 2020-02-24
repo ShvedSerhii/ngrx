@@ -7,7 +7,6 @@ import { UserRandomAddComponent } from './components/user-random-add/user-random
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { StoreModule } from '@ngrx/store';
 import { UserReducer } from './reducers/user.reducer';
-import { UserComponent } from './components/users-list/user/user.component'
 import { EffectsModule } from '@ngrx/effects';
 import { RandomUserEffects } from './effects/random-user.effects';
 
@@ -16,8 +15,7 @@ import { RandomUserEffects } from './effects/random-user.effects';
     AppComponent,
     UserAddComponent,
     UserRandomAddComponent,
-    UsersListComponent,
-    UserComponent,
+    UsersListComponent
   ],
   imports: [
     BrowserModule,
@@ -29,4 +27,4 @@ import { RandomUserEffects } from './effects/random-user.effects';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

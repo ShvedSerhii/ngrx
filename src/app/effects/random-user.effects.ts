@@ -1,10 +1,10 @@
-import { Injectable } from "@angular/core";
-import { Actions, Effect, ofType } from "@ngrx/effects";
-import { Observable } from "rxjs";
-import { switchMap, map } from "rxjs/operators";
-import { HttpClient } from "@angular/common/http";
+import { Injectable } from '@angular/core';
+import { Actions, Effect, ofType } from '@ngrx/effects';
+import { Observable } from 'rxjs';
+import { switchMap, map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
-import { UserActionTypes, UserGet, UserAdd } from "../actions/users.actions";
+import { UserActionTypes, UserGet, UserAdd } from '../actions/users.actions';
 
 @Injectable()
 export class RandomUserEffects {

@@ -1,3 +1,3 @@
 export class User {
-    login: string;
+  login: string;
 }

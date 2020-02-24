@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { select, Store } from "@ngrx/store";
-import { Observable } from "rxjs";
-import { User } from "../../models/user";
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { User } from '../../models/user';
 import { UserGet } from 'src/app/actions/users.actions';
 
 @Component({
@@ -12,14 +12,11 @@ import { UserGet } from 'src/app/actions/users.actions';
 export class UserRandomAddComponent {
   public users$: Observable<User[]>;
 
-  constructor(
-    private store: Store<{ users: User[] }>
-  ) {
+  constructor(private store: Store<{ users: User[] }>) {
     this.users$ = store.pipe(select('users'));
   }
 
-  public getUser() { 
-    this.store.dispatch(new UserGet()); 
-  } 
-
+  public getUser() {
+    this.store.dispatch(new UserGet());
+  }
 }
