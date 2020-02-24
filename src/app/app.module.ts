@@ -6,7 +6,8 @@ import { UserAddComponent } from './components/user-add/user-add.component';
 import { UserRandomAddComponent } from './components/user-random-add/user-random-add.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { StoreModule } from '@ngrx/store';
-import { UserReducer } from './reducers/user.reducer'
+import { UserReducer } from './reducers/user.reducer';
+import { UserComponent } from './components/users-list/user/user.component'
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { UserReducer } from './reducers/user.reducer'
     UserAddComponent,
     UserRandomAddComponent,
     UsersListComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,

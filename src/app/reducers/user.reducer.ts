@@ -21,7 +21,11 @@ export function UserReducer(state = initialState, action: ActionEx) {
     case UserActionTypes.Get:
       return state;
     case UserActionTypes.Edit:
-      return state;
+        return [
+            ...state.slice(0, action.payload.userIndex),
+            {login: action.payload.login},
+            ...state.slice(action.payload.userIndex + 1)
+        ];
     default:
       return state;
   }
