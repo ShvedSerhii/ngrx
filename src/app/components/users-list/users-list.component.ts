@@ -11,7 +11,7 @@ import { UserRemove, UserEdit } from 'src/app/actions/users.actions';
 })
 export class UsersListComponent {
   public users$: Observable<User[]>;
-  public checkUser = false;
+  public checkUser = [];
 
   constructor(private store: Store<{ users: User[] }>) {
     this.users$ = store.pipe(select('users'));
