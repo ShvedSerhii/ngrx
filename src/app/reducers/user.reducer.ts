@@ -2,10 +2,10 @@ import { ActionEx, UserActionTypes } from '../actions/users.actions';
 
 export const initialState = [
   {
-    login: 'sem'
+    login: 'Bart'
   },
   {
-    login: 'liza'
+    login: 'Lisa'
   }
 ];
 

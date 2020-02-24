@@ -1,8 +1,8 @@
-<h4>List of Users</h4>
-<ul>
-    <li *ngFor="let user of users$ | async, let i = index">
+<mat-list>
+    <h4>List of Users</h4>
+    <mat-list-item *ngFor="let user of users$ | async, let i = index">
         <div *ngIf='!checkUser[i]' class="user">
-            {{user.login}}
+            {{i + 1}}. {{user.login}}
             <button (click)="checkUser[i]=true">Edit</button>
             <button (click)="removeUser(i)">Delete</button>
         </div>
@@ -10,5 +10,5 @@
             <input #box value={{user.login}}>
             <button (click)="editUser(i, box.value); checkUser[i]=false">Save</button>
         </div>
-    </li>
-</ul>
+    </mat-list-item>
+</mat-list>

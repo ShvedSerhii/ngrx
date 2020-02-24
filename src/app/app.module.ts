@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { MatListModule } from '@angular/material/list';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 import { AppComponent } from './app.component';
 import { UserAddComponent } from './components/user-add/user-add.component';
 import { UserRandomAddComponent } from './components/user-random-add/user-random-add.component';
@@ -24,7 +27,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     StoreModule.forRoot({ users: UserReducer }),
     EffectsModule.forRoot([]),
     EffectsModule.forFeature([RandomUserEffects]),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatListModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

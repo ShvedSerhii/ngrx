@@ -17,8 +17,10 @@ export class UserAddComponent {
   }
 
   public addUser(userLogin: string) {
-    const user = new User();
-    user.login = userLogin;
-    this.store.dispatch(new UserAdd(user));
+    if (userLogin) {
+      const user = new User();
+      user.login = userLogin;
+      this.store.dispatch(new UserAdd(user));
+    }
   }
 }
