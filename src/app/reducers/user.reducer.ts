@@ -18,8 +18,6 @@ export function UserReducer(state = initialState, action: ActionEx) {
         ...state.slice(0, action.payload),
         ...state.slice(action.payload + 1)
       ];
-    case UserActionTypes.Get:
-      return state;
     case UserActionTypes.Edit:
         return [
             ...state.slice(0, action.payload.userIndex),
