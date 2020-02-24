@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { select, Store } from "@ngrx/store";
 import { Observable } from "rxjs";
 import { User } from "../../models/user";
-import { UserAdd, UserGet } from 'src/app/actions/users.actions';
+import { UserGet } from 'src/app/actions/users.actions';
 
 @Component({
   selector: 'app-user-random-add',
