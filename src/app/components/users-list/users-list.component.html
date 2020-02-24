@@ -1,0 +1,5 @@
+<h4>List of Users</h4>
+<ul *ngFor="let user of users$ | async" >
+    <li>{{user.login}}</li>
+</ul>
+
